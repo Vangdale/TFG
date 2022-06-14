@@ -1,16 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient} from '@angular/common/http';
-import { Observable } from "rxjs";
-import { Games } from "../Games/Games";
+@Injectable({
+    providedIn: 'root'
+})
+export class GameService {
 
-@Injectable()
-export class SeguridadSocialService {
+    constructor(private http: HttpClient){}
 
-    constructor(private _http: HttpClient){}
-
-    getGamesWeb1(): Observable<Games[]>{
-        const path = "http://localhost:8080/Instant";
-        return this._http.get<Games[]>(path);
+    getData(){
+        let url = "https://datagamepi.herokuapp.com/Instant";
+        return this.http.get(url);
     }
 
 }

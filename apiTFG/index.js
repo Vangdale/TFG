@@ -1,4 +1,4 @@
-const PORT = 8080 //HEROKU
+const PORT = process.env.PORT || 8080 //HEROKU
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -127,6 +127,11 @@ for (var actualPage = 0; actualPage <= 3; actualPage++) {
 
     
 }
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 app.get('/', (req, res) => {
     res.json("Api version alfa")

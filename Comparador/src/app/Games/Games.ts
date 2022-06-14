@@ -1,22 +1,22 @@
 export interface IGames {
-    Title: string;
-    Link: string;
-    Price: number;
+    title: string;
+    link: string;
+    price: number;
     Picture: string;
-    Origin: string;
+    origen: string;
 }
 
 export class Games implements IGames {
-    constructor(Title: string, Link: string, Price: number, Picture:string, Origin:string) {
-        this.Title = Title;
-        this.Link = Link;
-        this.Price = Price;
+    constructor(title: string, link: string, price: number, Picture:string, origen:string) {
+        this.title = title;
+        this.link = link;
+        this.price = price;
         this.Picture = Picture;
-        this.Origin = Origin;
+        this.origen = origen;
     }
-    Title: string;
-    Link: string;
-    Price: number;
+    title: string;
+    link: string;
+    price: number;
     Picture: string;
-    Origin: string;
+    origen: string;
 }

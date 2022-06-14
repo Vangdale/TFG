@@ -4,7 +4,7 @@
   "description": "comparador de precios",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "Vangdale",
   "license": "ISC",
