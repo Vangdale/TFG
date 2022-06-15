@@ -1,17 +1,8 @@
-<h1>Datos de la API</h1>
-<table border="1">
-    <tr>
-        <td>titulo</td>
-        <td>link</td>
-        <td>precio</td>
-        <td>foto</td>
-        <td>paginaOrigen</td>
-    </tr>
-    <tr *ngFor="let item of data">
-        <td>{{item.title}}</td>
-        <td>{{item.link}}</td>
-        <td>{{item.price}}</td>
-        <td>{{item.pictureUrl}}</td>
-        <td>{{item.Website}}</td>
-    </tr>   
-</table>
+<div style="padding:10px">
+    <ul class="nav nav-tabs">
+        <li><a routerLink="Instant">Instant-Gaming</a></li>
+        <li><a routerLink="Steam">Steam</a></li>
+        <li><a routerLink="GOG">GOG</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

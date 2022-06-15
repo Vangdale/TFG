@@ -10,6 +10,7 @@ const results = []
 const results2 = []
 const results3 = []
 const results4 = []
+var TodosResults = []
 
 var number = [1, 0, 1, 1]
 const topNumber = [2, 1, 2, 2] //170,116,280,135
@@ -17,7 +18,6 @@ const topNumber = [2, 1, 2, 2] //170,116,280,135
 
 
 for (var actualPage = 0; actualPage <= 3; actualPage++) {
-    console.log(actualPage)
     while (number[actualPage] <= topNumber[actualPage]) {
 
         const pages = [
@@ -45,9 +45,6 @@ for (var actualPage = 0; actualPage <= 3; actualPage++) {
 
         const nombre = pages[actualPage].name
         const base = pages[actualPage].base
-
-        console.log("website nº: " + number[actualPage])
-        console.log(pages[actualPage])
 
         axios.get(pages[actualPage].address).then(response => {
 
@@ -134,7 +131,9 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.json("Api version alfa")
+    TodosResults = [].concat(results ,results2, results3, results4)
+
+    res.json(TodosResults)
 })
 
 app.get('/Instant', (req, res) => {

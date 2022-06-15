@@ -1,0 +1,16 @@
+<h1>Datos de Instant Gaming</h1>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-4" *ngFor="let item of data">
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.pictureUrl}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.price}}</p>
+                    <a href="{{item.link}}" class="btn btn-primary">{{item.Website}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
