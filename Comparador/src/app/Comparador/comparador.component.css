@@ -1,0 +1,125 @@
+.d-block{
+  height: 300px;
+}
+
+
+
+
+
+.col-sm-3 {
+  margin-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.632) 0px 3px 8px;
+  margin-left: 50px;
+  margin-right: 20px;
+  background: radial-gradient(circle, #5f2161, #27162edc);
+  height: 50%;
+}
+
+h5,
+p,
+a {
+  color: white;
+  text-shadow: 2px 1px 4px #000000;
+}
+
+.card {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.632) 0px 3px 8px;
+  background: radial-gradient(circle, #bc6ec1, #71557cdc);
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: #000000;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.632) 0px 3px 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-sm-3 {
+    width: 75%;
+    margin-left: 35px;
+  }
+}
+
+
+
+
+/* CSS */
+.button-85 {
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-right: 30px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0, 0.842);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(45deg,
+      #0055ff,
+      #d900ff,
+      #e100ff,
+      #8000ff,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff00d4);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.54);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}

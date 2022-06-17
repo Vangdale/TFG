@@ -6,26 +6,20 @@ import { InstantComponent } from './Games_Instant/Instant.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SteamComponent } from './Games_Steam/Steam.component';
 import { GOGComponent } from './Games_GOG/GOG.component';
+import { SearchComponent } from './SearchGame/search.component';
+import { GamesComponent } from './Comparador/comparador.component';
 
 
 import { AppComponent } from './app.component';
 
-const appRutas: Routes = [
-  {path: 'Instant', component: InstantComponent},
-  {path: 'Steam', component: SteamComponent},
-  {path: 'GOG', component: GOGComponent}
-
-];
-
 @NgModule({
   declarations: [
-    AppComponent,InstantComponent, SteamComponent, GOGComponent
+    AppComponent,InstantComponent, SteamComponent, GOGComponent, SearchComponent, GamesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRutas)
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

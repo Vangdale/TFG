@@ -13,7 +13,7 @@ const results4 = []
 var TodosResults = []
 
 var number = [1, 0, 1, 1]
-const topNumber = [2, 1, 2, 2] //170,116,280,135
+const topNumber = [20, 19, 1, 20] //170,116,280,135
 
 
 
@@ -56,7 +56,7 @@ for (var actualPage = 0; actualPage <= 3; actualPage++) {
                     const title = $(this).find('.fallback').text()
                     const url = $(this).find('a').attr('href')
                     const price = $(this).find('.price').text()
-                    const picture = $(this).find('img').attr('src')
+                    const picture = $(this).find('.picture').attr('data-src')
 
                     results.push({
                         title,
